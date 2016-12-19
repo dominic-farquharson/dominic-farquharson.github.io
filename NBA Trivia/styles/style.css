@@ -13,16 +13,18 @@
 
 
 }
-
+/* Font size for heading */
 #heading {
   font-size:1.4em;
   font-family: 'Exo', sans-serif;
 
 }
+/* Image within heading, NBA logo */
 #heading>img {
   width:50px;
   height: 50px;
 }
+/* Chaning display property of NBA logo and heading*/
 #heading>img, #heading>h1 {
   display:inline-block;
 }
@@ -36,6 +38,7 @@
   text-align: center;
   background:rgba(0,0,0,.7);
 }
+/* Timer section */
 #timer {
   font-size: 2em;
   margin-bottom:20px;
@@ -49,22 +52,24 @@
   display:inline-block;
 
 }
-
+/* Heading for scores - fonts */
 .scoreHeading {
 
   font-size: 2em;
 }
-
+/* Score styling - numbers */
 .score {
   font-size: 3em;
   font-family: 'Exo', sans-serif;
 
 
 }
+/* Score board */
 #scoreSection {
   text-align: center;
 }
 
+/* Player and Computer score box */
 #player1, #computer {
   display:inline-block;
   border: 3px black solid;
@@ -91,16 +96,6 @@
   width: 50%;
   margin: 0 auto;
 
-}
-
-
-#road {
-  height:300px;
-  background:gray;
-}
-
-#car {
-  position: relative;
 }
 
 /* Image background */

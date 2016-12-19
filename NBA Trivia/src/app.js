@@ -20,9 +20,7 @@ let Computer1 = new Computer(0, 15);
 
 //End Game Screen - Restart Game
 function endStartNew() {
-  //stopping timer
-  clearInterval(timer);
-  //Hiding Quiz Questions + Timer,
+  //Hiding Quiz Questions + Timer. Add SlideUp effect
   $('#options').velocity('slideUp', {
     duration: 800
   });
@@ -35,10 +33,12 @@ function endStartNew() {
   $('#clock>h3').velocity('slideUp', {
     duration: 800
   });
+  //stopping timer
+  clearInterval(timer);
   //making try again button appear
   $('#tryAgain').toggle();
   if (Player1.score > Computer1.score) {
-    $('#scoreSection>h2>').text('You have defeated the Comptuer');
+    $('#scoreSection>h2').text('You have defeated the Comptuer');
   } else if (Player1.score == Computer1.score) {
     $('#scoreSection>h2').text('You have tied the Comptuer');
   } else if (Player1.score < Computer1.score) {
@@ -54,10 +54,10 @@ function counter() {
     $('#timer').html(Player1.time + 's');
     Player1.time--;
     if (Player1.time === -1) {
-      // alert('time is up');
-      clearInterval(timer);
       //End game when time is up
       alert('Time is up!');
+      // alert('time is up');
+      clearInterval(timer);
       endStartNew();
     }
 

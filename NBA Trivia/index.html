@@ -4,17 +4,17 @@
 
 <head>
   <title>Home</title>
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Exo" rel="stylesheet">
+  <link type="text/css" href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Exo" rel="stylesheet">
   <link href="styles/style.css" type="text/css" rel="stylesheet" />
 
 </head>
 
 <body>
   <!-- Questions + Answer + Timer -->
-  <div id='questionBoard'>
+  <div id="questionBoard">
     <div id="heading">
       <!-- Source: ESPNCDN.com -->
-      <img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png?transparent=true" />
+      <img alt="http://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png?transparent=true" src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png?transparent=true" />
       <h1>NBA Trivia</h1>
     </div>
 
@@ -28,27 +28,30 @@
         <div class="option0"></div>
         <div class="option1"></div>
       </div>
-      <div id='timer'>60s</div>
-      <div class='row2'>
+      <!-- Timer location -->
+      <div id="timer">60s</div>
+      <div class="row2">
         <div class="option2"></div>
         <div class="option3"></div>
       </div>
     </div>
     <!-- Clearing floats -->
-    <div class='clear'></div>
+    <div class="clear"></div>
 
-
-    <div id='scoreSection'>
+    <!-- Score -->
+    <div id="scoreSection">
       <h2 style="font-weight:normal">Score</h2>
-      <div id='player1'>
+      <!-- Player 1 Score section -->
+      <div id="player1">
         <h3 class="scoreHeading playerName">Player 1</h3>
-        <div id="playerScore" class='score'></div>
+        <div id="playerScore" class="score"></div>
       </div>
-      <div id='computer'>
+      <!-- Computer score section -->
+      <div id="computer">
         <h3 class="scoreHeading">Computer</h3>
-        <div id="computerScore" class='score'></div>
+        <div id="computerScore" class="score"></div>
       </div>
-
+      <!-- Try Again button. Initial display of none. -->
       <div id="tryAgain">Try again?</div>
     </div>
 
@@ -56,27 +59,27 @@
 
 
   <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Velocity.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
   <!-- Connecting Questions.js -->
-  <script src="src/questions.js"></script>
+  <script type="text/javascript" src="src/questions.js"></script>
   <!-- Game Logic -->
-  <script src="src/gameLogic.js"></script>
+  <script type="text/javascript" src="src/gameLogic.js"></script>
   <!-- Player file -->
-  <script src="src/player.js"></script>
+  <script type="text/javascript" src="src/player.js"></script>
   <!-- Connecting App. Js. -->
-  <script src="src/app.js"></script>
-
-  <script>
+  <script type="text/javascript" src="src/app.js"></script>
+  <!-- Grabbing user name -->
+  <script type="text/javascript">
     //Allowing user to input their name
     getName();
 
     function getName() {
-      let player1 = prompt('What is your name?');
-      $('.playerName').text(player1);
+      let player1 = prompt("What is your name?");
+      $(".playerName").text(player1);
     }
-    $('#tryAgain').click(function() {
+    $("#tryAgain").click(function() {
       location.reload();
     })
   </script>
